@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root
+{
+    --SoftBlue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img
+{
+    max-width: 424px;
+    height:fit-content;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    width: 100vw;
+    max-height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    font-size: 18px;
+
+    /* layouts */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: auto;
+    margin-top: 1.5rem;
+    background-color: hsl(216, 50%, 16%);
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+}
+
+.card .img-container{
+    position: relative;
+    margin-bottom: 1.25rem;
+
+}
+.card .img-container img{
+    border-radius: .75rem;
+}
+
+.overlay {
+    border-radius: .75rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: var(--Cyan);
+
+    display: flex;
+    place-content: center;
+    align-items: center;
+  }
+
+.card .img-container:hover .overlay {
+    border-radius: .75rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: .3s ease;
+    background-color: var(--Cyan);
+
+  }
+
+  .img-container svg{
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+
+.card .nft-name{
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.card .nft-name:hover{
+    color: var(--Cyan);
+}
+.card .label{
+    color: var(--SoftBlue);
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+}
+
+.val-date-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.val-date-container .eth{
+    font-weight: 400;
+    color: var(--Cyan);
+    
+    
+    /* layouts */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+
+.val-date-container .days-left{
+    color: var(--SoftBlue);
+    font-weight: 400;
+
+    /* layouts */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.val-date-container .eth svg{
+    display: inline-block;
+    vertical-align: center;
+    text-align: center;
+
+}
+
+
+.line{
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.author-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.author-container img{
+    width: 2rem;
+    border: solid var(--White) 1px;
+    border-radius: 100%;
+}
+.author-container p{
+    color: var(--SoftBlue)
+}
+.author-container p span{
+    color: white;
+}
+
+.author-container p span:hover{
+    color: var(--Cyan);
+}
